@@ -24,7 +24,7 @@ export class AuthService {
     return { id, name, role, token };
   }
 
-  // ## USER SIGNUP WITH AUTH
+  // ## USER SIGNUP
   async userSignup({ name, email, phone, password }: SignupParams) {
     try {
       const hashPassword = await bcrypt.hash(password, 10);
