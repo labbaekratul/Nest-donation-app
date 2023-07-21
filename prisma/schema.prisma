@@ -24,7 +24,7 @@ model Donation {
   status         Status        @default(PENDING)
   donationAmount Float
   donatedTo      WhereToDonate
-  description    String?       @map("trim(description)") @db.VarChar(255)
+  title          String?       @map("trim(title)") @db.VarChar(100)
   userId         String
   createdAt      DateTime      @default(now())
   updatedAt      DateTime      @updatedAt
@@ -45,5 +45,6 @@ enum Status {
 
 enum WhereToDonate {
   MOSQUE
-  ORPHAN
+  ORPHANAGE
+  MADRASA
 }

@@ -26,7 +26,7 @@ export class DonationDto {
   @IsOptional()
   @IsString()
   @MaxLength(255)
-  description: string;
+  title: string;
 
   @IsOptional()
   userId;
@@ -49,8 +49,8 @@ export class DonationUpdateByAdminDto {
 
   @IsOptional()
   @IsString()
-  @MaxLength(255)
-  description: string;
+  @MaxLength(100)
+  title: string;
 
   @IsOptional()
   @IsNotEmpty()
@@ -71,8 +71,8 @@ export class DonationUpdateByUserDto {
 
   @IsOptional()
   @IsString()
-  @MaxLength(255)
-  description: string;
+  @MaxLength(100)
+  title: string;
 }
 
 export class DonationSoftDeleteByUserDto {

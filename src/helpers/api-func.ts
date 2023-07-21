@@ -10,7 +10,7 @@ export const apiMathods = async (
   const {
     include,
     pageNumber = 1,
-    pageSize = 20,
+    pageSize = 10,
     select,
     includeFields,
     ...filter
@@ -56,7 +56,7 @@ export const apiMathods = async (
       include: IncludeFields || Include,
       select: fields,
       orderBy: { updatedAt: 'desc' },
-      skip: (pageNumber - 1) * pageSize,
+      skip: (Number(pageNumber) - 1) * pageSize,
       take: pageSize,
     }),
     model.count({

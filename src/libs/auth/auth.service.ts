@@ -20,8 +20,8 @@ export class AuthService {
     return { id, name, role };
   }
   private Response(userData, token) {
-    const { id, name } = userData;
-    return { id, name, token };
+    const { id, name, role } = userData;
+    return { id, name, role, token };
   }
 
   // ## USER SIGNUP WITH AUTH

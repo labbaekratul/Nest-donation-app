@@ -39,6 +39,7 @@ export class DonationService {
       },
     });
     if (!donation) return errorHandler(404);
+
     if (donation.userId === loggedUser.id || loggedUser.role === 'ADMIN')
       return donation;
     return errorHandler(401, false);

@@ -22,7 +22,10 @@ export const errorHandler = (
     case 406:
       throw new HttpException({ message: 'Not Acceptable' }, statusCode);
     case 409:
-      throw new HttpException({ message: 'Phone already used' }, statusCode);
+      throw new HttpException(
+        { message: 'Phone number already used' },
+        statusCode,
+      );
     default:
       throw new HttpException({ message }, 500);
   }

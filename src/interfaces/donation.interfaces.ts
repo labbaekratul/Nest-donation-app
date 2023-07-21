@@ -2,6 +2,6 @@
 export interface DonatiionParams {
   moneyAmount: number;
   donationType: string;
-  description?: string;
+  title?: string;
   userId: string;
 }
